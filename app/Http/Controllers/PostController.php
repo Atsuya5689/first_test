@@ -11,6 +11,16 @@ class PostController extends Controller
     public function index(Post $post)
     {
         return view('posts/index')->with(['posts' => $post->getPaginateByLimit()]);
+ dev_basis04
+    } 
+    public function show(Post $post)
+    {
+        return view('posts/show')->with(['post' => $post]);
+    }
+    public function create()
+    {
+        return view('posts/create');
+
         //eturn $post->get();//$postはDBのposttable
     } 
     
@@ -24,5 +34,8 @@ class PostController extends Controller
     public function show(Post $post)
     {
         return view('posts/show')->with(['post' => $post]);
+ master
     }
 }
+
+?>
